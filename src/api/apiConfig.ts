@@ -1,5 +1,5 @@
 import axios, { CreateAxiosDefaults } from "axios";
-import { ApiError, HttpStatusCodeError } from "../types/errors";
+import { ApiError, HttpStatusCodeError } from "../types/Error";
 
 const config = (baseUri: string): CreateAxiosDefaults => ({
   baseURL: baseUri,
@@ -33,7 +33,7 @@ function api(baseUri: string) {
   return instance;
 }
 
-export const BASE_API_URL = "/venteregister-api/api/v1";
+export const BASE_API_URL = "/oppdrag-api/api/v1/venteregister";
 
 export function axiosFetcher<T>(baseUri: string, url: string) {
   return api(baseUri)

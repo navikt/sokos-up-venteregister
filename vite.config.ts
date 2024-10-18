@@ -30,10 +30,9 @@ export default defineConfig(({ mode }) => ({
     mode == "local-dev"
       ? {
           proxy: {
-            "/venteregister-api/api/v1/employee": {
+            "/oppdrag-api/api/v1": {
               target: "http://localhost:8080",
-              rewrite: (path: string) =>
-                path.replace(/^\/mikrofrontend-api/, ""),
+              rewrite: (path: string) => path.replace(/^\/oppdrag-api/, ""),
               changeOrigin: true,
               secure: false,
             },

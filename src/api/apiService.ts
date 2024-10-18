@@ -1,5 +1,5 @@
 import useSWRImmutable from "swr/immutable";
-import { EmployeeListe } from "../types/Employee";
+import { AnsatteList } from "../types/Ansatte";
 import { BASE_API_URL, axiosFetcher } from "./apiConfig";
 
 const swrConfig = {
@@ -9,6 +9,6 @@ const swrConfig = {
   refreshInterval: 120000,
 };
 
-export function useGetEmployee() {
-  return useSWRImmutable<EmployeeListe>(`/employee`, swrConfig);
+export function useGetAnsatte() {
+  return useSWRImmutable<AnsatteList>(`/ansatte`, swrConfig);
 }
