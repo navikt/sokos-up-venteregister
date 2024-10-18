@@ -7,6 +7,7 @@ export default function TemplatePage() {
     { id: 1, navn: "Ola Nordmann", yrke: "Lærer" },
     { id: 2, navn: "Kari Nordmann", yrke: "Sykepleier" },
     { id: 3, navn: "Per Hansen", yrke: "Elektriker" },
+    { id: 4, navn: "Kari Hansen", yrke: "Partyfikser" },
   ];
 
   return (
