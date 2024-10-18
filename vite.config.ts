@@ -12,11 +12,11 @@ const reactDomUrl =
   "https://www.nav.no/tms-min-side-assets/react-dom/18/esm/index.js";
 
 export default defineConfig(({ mode }) => ({
-  base: "/mikrofrontend",
+  base: "/venteregister",
   build: {
     lib: {
       entry: resolve(__dirname, "src/App.tsx"),
-      name: "sokos-mikrofrontend-template",
+      name: "sokos-up-venteregister",
       formats: ["es"],
       fileName: () => "bundle.js",
     },
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => ({
     mode == "local-dev"
       ? {
           proxy: {
-            "/mikrofrontend-api/api/v1/employee": {
+            "/venteregister-api/api/v1/employee": {
               target: "http://localhost:8080",
               rewrite: (path: string) =>
                 path.replace(/^\/mikrofrontend-api/, ""),

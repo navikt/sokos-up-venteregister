@@ -1,4 +1,4 @@
-# sokos-mikrofrontend-template
+# sokos-up-venteregister
 
 Brukes som utgangspunkt for å opprette nye mikrofrontends i Økonomiportalen.
 
