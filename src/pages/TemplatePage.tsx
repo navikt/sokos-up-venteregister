@@ -14,11 +14,9 @@ export default function TemplatePage() {
     <>
       <div className={styles.template__header}>
         <Heading spacing level="2" size="large">
-          Mikrofrontend Template
+          Venteregister
         </Heading>
-        <BodyLong>
-          Dette er en template for å bygge undersider i Utbetalingsportalen
-        </BodyLong>
+        <BodyLong>Her kommer venteregister!!</BodyLong>
       </div>
 
       <div className={styles.template__body}>
