@@ -11,6 +11,7 @@ const reactDomUrl =
   "https://www.nav.no/tms-min-side-assets/react-dom/18/esm/index.js";
 
 export default defineConfig(({ mode }) => ({
+  base: "/venteregister",
   build: {
     lib: {
       entry: resolve(__dirname, "src/App.tsx"),
@@ -24,19 +25,24 @@ export default defineConfig(({ mode }) => ({
       generateScopedName: "[name]__[local]___[hash:base64:5]",
     },
   },
-  server:
-    mode == "local-dev"
-      ? {
-          proxy: {
-            "/oppdrag-api/api/v1": {
-              target: "http://localhost:8080",
-              rewrite: (path: string) => path.replace(/^\/oppdrag-api/, ""),
-              changeOrigin: true,
-              secure: false,
-            },
-          },
-        }
-      : {},
+  server: {
+    proxy: {
+      ...(mode === "local-dev" && {
+        "/oppdrag-api/api/v1": {
+          target: "http://localhost:8080",
+          rewrite: (path: string) => path.replace(/^\/oppdrag-api/, ""),
+          changeOrigin: true,
+          secure: false,
+        },
+      }),
+      ...(mode === "mock" && {
+        "/mockServiceWorker.js": {
+          target: "http://localhost:5173",
+          rewrite: () => "venteregister/mockServiceWorker.js",
+        },
+      }),
+    },
+  },
   plugins: [
     react(),
     cssInjectedByJsPlugin(),

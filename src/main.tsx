@@ -6,7 +6,9 @@ import "./index.css";
 const startMsw = async () => {
   if (process.env.NODE_ENV === "local") {
     const { worker } = await import("./mocks/browser");
-    await worker.start();
+    await worker.start({
+      onUnhandledRequest: "bypass",
+    });
   }
 };
 
