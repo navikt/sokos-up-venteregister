@@ -1,7 +1,7 @@
 import axios, { CreateAxiosDefaults } from "axios";
 
 export const BASE_URI = {
-  VENTEREGISTER: "/oppdrag-api/api/v1/venteregister",
+  VENTEREGISTER: "/venteregister/oppdrag-api/api/v1/venteregister",
 };
 
 const config = (baseUri: string): CreateAxiosDefaults => ({
