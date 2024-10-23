@@ -3,7 +3,7 @@ import { AnsatteList } from "../types/Ansatte";
 import { axiosFetcher } from "./config/apiConfig";
 
 const BASE_URI = {
-  VENTEREGISTER: "/oppdrag-api/api/v1/venteregister",
+  VENTEREGISTER_API: "/oppdrag-api/api/v1/venteregister",
 };
 
 function swrConfig<T>(fetcher: (uri: string) => Promise<T>) {
@@ -19,7 +19,7 @@ export default function useGetAnsatte() {
   const { data, error, isValidating } = useSWRImmutable<AnsatteList>(
     `/ansatte`,
     swrConfig<AnsatteList>((url) =>
-      axiosFetcher<AnsatteList>(BASE_URI.VENTEREGISTER, url),
+      axiosFetcher<AnsatteList>(BASE_URI.VENTEREGISTER_API, url),
     ),
   );
   const isLoading = (!error && !data) || isValidating;
