@@ -18,10 +18,11 @@ const config = (baseUri: string): CreateAxiosDefaults => ({
 
 const api = (baseUri: string) => axios.create(config(baseUri));
 
-export const axiosFetcher = <T>(baseUri: string, url: string) =>
-  api(baseUri)
+export function axiosFetcher<T>(baseUri: string, url: string) {
+  return api(baseUri)
     .get<T>(url)
     .then((res) => res.data);
+}
 
 export const axiosPostFetcher = <T, U>(
   baseUri: string,
