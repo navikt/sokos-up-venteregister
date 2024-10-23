@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["./src", "msw/browser.ts", "msw/handlers.ts"]
+  "include": ["./src", "mock/browser.ts", "mock/handlers.ts"]
 }

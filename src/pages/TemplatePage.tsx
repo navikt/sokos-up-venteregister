@@ -1,5 +1,5 @@
 import { BodyLong, Heading, Loader, Table } from "@navikt/ds-react";
-import useGetAnsatte from "../hooks/useGetAnsatte";
+import useGetAnsatte from "../api/apiService";
 import { Ansatte } from "../types/Ansatte";
 import styles from "./TemplatePage.module.css";
 
