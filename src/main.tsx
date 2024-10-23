@@ -5,8 +5,15 @@ import "./index.css";
 
 const startMsw = async () => {
   if (import.meta.env.MODE === "mock") {
-    const { worker } = await import("./mocks/browser");
-    await worker.start();
+    try {
+      const { worker } = await import("../msw/browser");
+      await worker.start({
+        onUnhandledRequest: "bypass", // for assets o.l.
+      });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error("Failed to start MSW", error);
+    }
   }
 };
 

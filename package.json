@@ -61,7 +61,7 @@
   },
   "msw": {
     "workerDirectory": [
-      "public"
+      "msw"
     ]
   },
   "browserslist": {
