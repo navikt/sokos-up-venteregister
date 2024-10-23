@@ -5,7 +5,7 @@ import { initGrafanaFaro } from "./util/grafanaFaro";
 
 export default function App() {
   useEffect(() => {
-    initGrafanaFaro();
+    if (window.location.hostname !== "localhost") initGrafanaFaro();
   }, []);
 
   return <TemplatePage />;

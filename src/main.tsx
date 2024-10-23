@@ -4,14 +4,9 @@ import App from "./App";
 import "./index.css";
 
 const startMsw = async () => {
-  if (import.meta.env.VITE_MOCK === "true") {
+  if (process.env.NODE_ENV === "local") {
     const { worker } = await import("./mocks/browser");
-    await worker.start({
-      serviceWorker: {
-        // Specify the worker script URL relative to the _root_.
-        url: "venteregister/mockServiceWorker.js",
-      },
-    });
+    await worker.start();
   }
 };
 
