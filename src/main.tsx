@@ -4,28 +4,22 @@ import App from "./App";
 import "./index.css";
 
 const startMsw = async () => {
-  if (process.env.NODE_ENV === "local") {
+  if (import.meta.env.MODE === "mock") {
     const { worker } = await import("./mocks/browser");
-    await worker.start({
-      onUnhandledRequest: "bypass",
-    });
+    await worker.start();
   }
 };
 
-await startMsw();
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
-
-root.render(
-  <React.StrictMode>
-    <div className="page-wrapper">
-      <div className="page-layout">
-        <main>
-          <App />
-        </main>
+startMsw().then(() =>
+  ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+    <React.StrictMode>
+      <div className="page-wrapper">
+        <div className="page-layout">
+          <main>
+            <App />
+          </main>
+        </div>
       </div>
-    </div>
-  </React.StrictMode>,
+    </React.StrictMode>,
+  ),
 );

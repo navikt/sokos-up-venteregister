@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => ({
   },
   server: {
     proxy: {
-      ...(mode === "local-dev" && {
+      ...(mode === "backend" && {
         "/oppdrag-api/api/v1": {
           target: "http://localhost:8080",
           rewrite: (path: string) => path.replace(/^\/oppdrag-api/, ""),
