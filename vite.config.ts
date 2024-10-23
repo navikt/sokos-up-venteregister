@@ -5,7 +5,6 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import EnvironmentPlugin from "vite-plugin-environment";
-import { viteMockServe } from "vite-plugin-mock";
 
 const reactUrl = "https://www.nav.no/tms-min-side-assets/react/18/esm/index.js";
 const reactDomUrl =
@@ -44,10 +43,6 @@ export default defineConfig(({ mode }) => ({
     cssInjectedByJsPlugin(),
     EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV || "development",
-    }),
-    viteMockServe({
-      mockPath: "mock",
-      enable: mode === "local-mock",
     }),
     {
       ...importMapPlugin({
