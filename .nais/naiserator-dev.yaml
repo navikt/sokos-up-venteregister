@@ -23,6 +23,9 @@ spec:
   ingresses:
     - "https://utbetalingsportalen.intern.dev.nav.no/sokos-up-venteregister"
     - "https://utbetalingsportalen.ansatt.dev.nav.no/sokos-up-venteregister"
+    - "https://utbetalingsportalen-qx.intern.dev.nav.no/sokos-up-venteregister"
+    - "https://utbetalingsportalen-qx.ansatt.dev.nav.no/sokos-up-venteregister"
+
   resources:
     limits:
       cpu: "3"
