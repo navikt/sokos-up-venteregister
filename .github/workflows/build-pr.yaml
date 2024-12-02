@@ -3,6 +3,9 @@ name: Build/test and validate PR
 on:
   pull_request:
 
+permissions:
+  contents: "read"
+
 jobs:
   build-pr:
     name: Build and test
