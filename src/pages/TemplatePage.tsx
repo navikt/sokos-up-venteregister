@@ -17,7 +17,7 @@ export default function TemplatePage() {
   return (
     <>
       <div className={styles["template-header"]}>
-        <Heading spacing level="2" size="large">
+        <Heading spacing level="1" size="large">
           Venteregister
         </Heading>
         <BodyLong>Her kommer venteregister!!</BodyLong>
