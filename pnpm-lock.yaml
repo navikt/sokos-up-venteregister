@@ -938,18 +938,17 @@ packages:
     resolution:
       {
         integrity: sha512-+LYvvHVhTnIuRxIzvGCjBFUOaf9vZKnfVl0tugraVXz1DV6v3dfk6sLPpXEdXYI+SF+dh4i9rDxQCJ1lOglbeg==,
+        tarball: https://npm.pkg.github.com/download/@navikt/ds-react/7.12.2/16d52d4941f1c793b1ddb6d65473485a09ddce69,
       }
     peerDependencies:
       "@types/react": ">=17.0.30"
       react: ">=17.0.0 || >19.0.0-rc"
-    peerDependenciesMeta:
-      "@types/react":
-        optional: true
 
   "@navikt/ds-tokens@7.12.2":
     resolution:
       {
         integrity: sha512-3FjUOx6w4jYOVn0BDnyA7kMpw+pnU96X5XvSJtZeNZl+wNjm+Zub7h6ZoQjfDU3JJKmIyFRH6yL00LxoXlKDfg==,
+        tarball: https://npm.pkg.github.com/download/@navikt/ds-tokens/7.12.2/7c20adc3b0e0b24697750f3672bd089366704355,
       }
 
   "@nodelib/fs.scandir@2.1.5":
@@ -6008,12 +6007,11 @@ snapshots:
       "@floating-ui/react-dom": 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@navikt/aksel-icons": 7.12.2
       "@navikt/ds-tokens": 7.12.2
+      "@types/react": 18.3.18
       clsx: 2.1.1
       date-fns: 3.6.0
       react: 18.3.1
       react-day-picker: 8.10.1(date-fns@3.6.0)(react@18.3.1)
-    optionalDependencies:
-      "@types/react": 18.3.18
     transitivePeerDependencies:
       - react-dom
 
