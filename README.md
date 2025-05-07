@@ -14,7 +14,7 @@ Backend til applikasjonen er [sokos-oppdrag](https://github.com/navikt/sokos-opp
 
 Mininum av AD-gruppe som kreves for å få tilgang til skjermbildet:
 
-- `0000-GA-SOKOS-MF-VENTEREGISTER-READ` (selve applikasjon i utbetalingsportalen)
+- `0000-CA-SOKOS-MF-VENTEREGISTER-READ` (selve applikasjon i utbetalingsportalen)
 
 Tilgang fås ved ta kontakt med din identansvarlig. Det kan noen ganger være en strevsomt å få på plass tilganger
 i identrutinene. Det er derfor viktig å benytte riktig begrep i kommunikasjon med dem (kolonne 1 nedenfor)
@@ -35,8 +35,3 @@ i identrutinene. Det er derfor viktig å benytte riktig begrep i kommunikasjon m
 5. Appen nås på <http://localhost:5173/venteregister>
 
 NB! Anbefaler sette opp [ModHeader](https://modheader.com/) extension på Chrome for å sende med Obo-token i `Authorization` header når du kjører mot backend lokalt da den krever at token inneholder NavIdent.
-
-# Henvendelser
-
-Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på Github.
-Interne henvendelser kan sendes via Slack i kanalen #po-utbetaling.
